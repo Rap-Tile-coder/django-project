@@ -10,6 +10,8 @@
       <th scope="col">RetailPrice</th>
       <th scope="col">SalePrice</th>
       <th scope="col">Quantity</th>
+      <th scope="col">Delete</th>
+      <th scope="col">Update</th>
     </tr>
   </thead>
   <tbody>
@@ -21,6 +23,17 @@
       <td>{{details.RetailPrice}}</td>
       <td>{{details.SalePrice}}</td>
       <td>{{details.Quantity}}</td>
+      <td>
+        <form action="{% url 'del' details.id %}" method="POST">
+          {% csrf_token %}
+          <button type="submit" class="btn btn-danger">Delete</button>
+        </form>
+      </td>
+      <td>
+        <a type="submit" class="btn btn-success"
+       href="{% url 'update' details.id %}">Update
+        </a>
+      </td>
     </tr>
   {% endfor %}
   </tbody>

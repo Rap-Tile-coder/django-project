@@ -1,0 +1,11 @@
+{% extends 'dashboard.html' %}
+
+{% block content %}
+<form method = 'post'>
+    {% csrf_token %}
+    {{form}}
+    <div class="d-grid gap-2 d-md-block">
+        <button class="btn btn-primary" type="button">Updated</button>
+    </div>
+</form>
+{% endblock %}
