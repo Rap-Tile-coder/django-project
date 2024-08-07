@@ -3,6 +3,7 @@ from django.db import models
 # Create your models here.
 
 class Furniture(models.Model):
+    objects = None
     furnitureType  = (
         ("bedcott","bedcott"),("sofa-set", "sofa-set"),
         ("chairs","chair"), ("dhiwan","dhiwan"),

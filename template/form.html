@@ -1,7 +1,9 @@
 {% extends 'dashboard.html' %}
 {%load crispy_forms_tags %}
 {% block content %}
-
-{{ form|crispy }}
-
-{% endblock %}
+<form method = 'post'>
+    {% csrf_token %}
+    {{ form|crispy }}
+    <button type="Submit" class="btn btn-success">Submit</button>
+</form>
+{% en dblock %}

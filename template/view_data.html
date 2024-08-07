@@ -1,0 +1,31 @@
+{% extends 'dashboard.html' %}
+{% block content %}
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">SI.No</th>
+      <th scope="col">ItemName</th>
+      <th scope="col">CustomerName</th>
+      <th scope="col">RetailPrice</th>
+      <th scope="col">SalePrice</th>
+      <th scope="col">Quantity</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for details in data %}
+    <tr>
+      <th scope="row">{{forloop.counter}}</th>
+      <td>{{details.ItemName}}</td>
+      <td>{{details.CustomerName}}</td>
+      <td>{{details.RetailPrice}}</td>
+      <td>{{details.SalePrice}}</td>
+      <td>{{details.Quantity}}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+
+
+{% endblock %}
+
